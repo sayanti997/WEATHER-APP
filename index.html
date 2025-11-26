@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mock Weather — Animated Background</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <h1>MockWeather</h1>
+        <small>Offline demo • deterministic forecasts</small>
+      </div>
+      <div class="controls">
+        <input id="cityInput" type="text" placeholder="Enter city (e.g. London)" />
+        <button id="searchBtn">Search</button>
+        <button id="locBtn" title="Use your location">📍</button>
+        <button id="themeBtn" title="Toggle theme">🌙</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="current glass">
+        <div class="meta">
+          <h2 id="cityName">—</h2>
+          <p id="localTime">—</p>
+        </div>
+        <div class="weather-block">
+          <div id="icon" class="icon large"></div>
+          <div class="temps">
+            <div class="temp-large"><span id="temp">--</span>°C</div>
+            <div class="desc" id="desc">—</div>
+            <div class="feels">Feels like <span id="feels">--</span>°C</div>
+          </div>
+        </div>
+        <div class="current-stats">
+          <div>Humidity: <span id="humidity">--</span>%</div>
+          <div>Wind: <span id="wind">--</span> km/h</div>
+          <div>Pressure: <span id="pressure">--</span> hPa</div>
+          <div>Visibility: <span id="vis">--</span> km</div>
+        </div>
+      </section>
+
+      <section class="forecast glass">
+        <h3>7-Day Forecast</h3>
+        <div id="daily" class="cards"></div>
+      </section>
+
+      <section class="hourly glass">
+        <h3>Next 12 Hours</h3>
+        <div id="hourly" class="hour-cards"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Demo generated offline — great for portfolio & presentations.</small>
+    </footer>
+
+    <div id="toast" class="toast hidden"></div>
+    <div id="weather-bg"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
